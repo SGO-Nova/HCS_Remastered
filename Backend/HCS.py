@@ -24,18 +24,40 @@ def home_page():
 
     return json_dump
 
+#Employee
 @app.route("/Employees/Login", methods=["GET"])
 def login():
     _id = request.args.get("id")
 
-    return f"GOT \n\tID: {_id}\n"
+    print(f"ID: {_id}")
+
+    employee = db["Employees"].find({
+        "id": int(_id)
+    },
+    {
+        "_id": False
+    })
+
+    print("Employee:")
+    for x in employee:
+        print(x)
+        return str(x)
+
+    return None
 
 @app.route("/Employees/Create", methods=["POST"])
 def create():
     _id = request.args.get("id")
     _password = request.args.get("password")
+    _type = requests.args.get("type")
+    
+    db["Employees"].insert_one({
+        "id": _id,
+        "password": _password,
+        "type": _type
+    })
 
-    return f"GOT \n\tID: {_id}\n\tPassword: {_password}\n"
+    return _id
 
 if __name__ == "__main__":
     app.run(port=7777)
