@@ -1,0 +1,17 @@
+﻿<Window x:Class="HCS_Remastered.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HCS_Remastered"
+        mc:Ignorable="d"
+        Title="Main" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="45,31,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="45,54,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="45,77,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="45,100,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="45,158,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="237" Width="621"/>
+
+    </Grid>
+</Window>
